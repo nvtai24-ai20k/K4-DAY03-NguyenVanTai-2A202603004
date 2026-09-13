@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TC01",
+    "type": "direct_query",
+    "question": "Mật khẩu tài khoản công ty cần đáp ứng những tiêu chí gì để được coi là mật khẩu mạnh, và bao lâu thì nên đổi một lần?",
+    "expected_behavior": "Agent trả lời trực tiếp từ kiến thức IT chung, không gọi bất kỳ Tool nào.",
+    "expected_tools": [],
+    "complexity": "Low"
+  },
+  {
+    "id": "TC02",
+    "type": "single_tool_query",
+    "question": "Kiểm tra giúp tôi tình trạng xử lý của ticket IT-1012.",
+    "expected_behavior": "Agent gọi 'helpdesk_query' với ticket_id IT-1012, trả lời đúng trạng thái IN_PROGRESS, kỹ thuật viên Phạm Đức Anh và ghi chú đang chờ xác minh danh tính.",
+    "expected_tools": ["helpdesk_query"],
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC03",
+    "type": "ticket_creation",
+    "question": "Tôi là nhân viên NV003. Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, hãy tạo yêu cầu hỗ trợ kỹ thuật với mức ưu tiên MEDIUM.",
+    "expected_behavior": "Agent gọi 'create_support_ticket' cho NV003 với category HARDWARE, priority MEDIUM, mô tả đúng sự cố (có thể gọi 'helpdesk_query' trước để kiểm tra ticket trùng và lấy kỹ thuật viên phụ trách), rồi báo lại mã ticket, kỹ thuật viên và SLA.",
+    "expected_tools": ["create_support_ticket"],
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC04",
+    "type": "multi_step_reasoning",
+    "question": "Tôi là NV001, wifi ở tầng 3 lại mất kết nối hoàn toàn nên tôi không làm việc được. Kiểm tra xem tôi còn ticket mạng nào đang mở không; nếu không có thì tạo ticket mới và giao cho kỹ thuật viên phụ trách của tôi.",
+    "expected_behavior": "Agent suy luận ReAct đa bước: gọi 'helpdesk_query' cho NV001, thấy ticket NETWORK IT-1001 đã RESOLVED và tìm được kỹ thuật viên Trần Quốc Huy, sau đó gọi 'create_support_ticket' (NETWORK, HIGH, giao cho Trần Quốc Huy).",
+    "expected_tools": ["helpdesk_query", "create_support_ticket"],
+    "complexity": "High"
+  },
+  {
+    "id": "TC05",
+    "type": "edge_case_handling",
+    "question": "Tài khoản của nhân viên NV999 bị khóa, hãy kiểm tra thông tin rồi tạo ticket mở khóa cho người này.",
+    "expected_behavior": "Agent gọi 'helpdesk_query' với NV999, nhận NOT_FOUND, không tạo ticket và phản hồi lịch sự đề nghị kiểm tra lại mã nhân viên, không bịa đặt dữ liệu.",
+    "expected_tools": ["helpdesk_query"],
+    "complexity": "Medium"
+  }
+]

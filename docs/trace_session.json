@@ -1,20 +1,6 @@
 [
   {
-    "test_case_id": "TC01",
-    "step": 1,
-    "query": "Mật khẩu tài khoản công ty cần đáp ứng những tiêu chí gì để được coi là mật khẩu mạnh, và bao lâu thì nên đổi một lần?",
-    "action_type": "FINAL_ANSWER",
-    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Mật khẩu mạnh thường cần đáp ứng các tiêu chí sau: \n- Độ dài tối thiểu 8-12 ký tự.\n- Kết hợp cả chữ hoa, chữ thường, số và ký tự đặc biệt.\n- Không dùng từ dễ đoán như tên người, ngày sinh, hoặc các chuỗi số phổ biến.\n- Tránh dùng mật khẩu trùng lặp với các tài khoản khác.\n\nVề tần suất đổi mật khẩu, thông thường nên đổi sau mỗi 3 đến 6 tháng để đảm bảo an toàn, hoặc ngay lập tức khi nghi ngờ bị lộ mật khẩu.\n\nBạn cần mình hướng dẫn thêm hay hỗ trợ gì khác không?",
-    "llm_latency_ms": 5046.9,
-    "retry_wait_ms": 0.0,
-    "latency_ms": 5046.9,
-    "provider": "OpenAIProvider",
-    "model": "gpt-4.1-mini",
-    "start_offset_ms": 0.09
-  },
-  {
-    "test_case_id": "TC02",
+    "test_case_id": null,
     "step": 1,
     "query": "Kiểm tra giúp tôi tình trạng xử lý của ticket IT-1012.",
     "action_type": "TOOL_EXECUTION",
@@ -44,34 +30,48 @@
         "department": "Phòng Nhân sự"
       }
     },
-    "llm_latency_ms": 858.51,
+    "llm_latency_ms": 3488.82,
     "retry_wait_ms": 0.0,
-    "tool_latency_ms": 0.06,
-    "latency_ms": 858.57,
+    "tool_latency_ms": 0.08,
+    "latency_ms": 3488.9,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
     "start_offset_ms": 0.09
   },
   {
-    "test_case_id": "TC02",
+    "test_case_id": null,
     "step": 2,
     "query": "Kiểm tra giúp tôi tình trạng xử lý của ticket IT-1012.",
     "action_type": "FINAL_ANSWER",
     "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Ticket IT-1012, liên quan đến tài khoản email và VPN bị khóa của bạn Lê Thu Hà (NV002), hiện đang trong trạng thái IN_PROGRESS. Kỹ thuật viên phụ trách là Phạm Đức Anh và đang chờ xác minh danh tính từ quản lý trước khi mở khóa. Bạn cần hỗ trợ thêm gì không?",
-    "llm_latency_ms": 1227.84,
+    "output": "Ticket IT-1012 về sự cố \"Tài khoản email và VPN bị khóa\" của bạn Lê Thu Hà đang được xử lý, trạng thái IN_PROGRESS. Kỹ thuật viên phụ trách là Phạm Đức Anh, hiện đang chờ quản lý trực tiếp xác minh danh tính trước khi mở khóa tài khoản.",
+    "llm_latency_ms": 967.06,
     "retry_wait_ms": 0.0,
-    "latency_ms": 1227.84,
+    "latency_ms": 967.06,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 859.1
+    "start_offset_ms": 3489.46
   },
   {
-    "test_case_id": "TC03",
+    "test_case_id": null,
+    "step": 1,
+    "query": "Mật khẩu tài khoản công ty cần đáp ứng những tiêu chí gì để được coi là mật khẩu mạnh, và bao lâu thì nên đổi một lần?",
+    "action_type": "FINAL_ANSWER",
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Mật khẩu tài khoản công ty mạnh thường cần đáp ứng các tiêu chí sau:\n- Độ dài tối thiểu 8-12 ký tự\n- Kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt\n- Không chứa thông tin cá nhân dễ đoán (tên, ngày sinh, số điện thoại)\n- Tránh dùng các từ phổ biến hoặc chuỗi ký tự liên tiếp như \"123456\", \"password\"\n\nVề thời gian đổi mật khẩu, theo tiêu chuẩn bảo mật phổ biến:\n- Nên đổi mật khẩu định kỳ từ 60 đến 90 ngày\n- Khi có dấu hiệu bị nghi ngờ hoặc sự cố bảo mật cũng cần đổi ngay\n\nNếu công ty bạn có chính sách riêng, bạn nên tham khảo cụ thể quy định nội bộ nhé.",
+    "llm_latency_ms": 1741.56,
+    "retry_wait_ms": 0.0,
+    "latency_ms": 1741.56,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4.1-mini",
+    "start_offset_ms": 0.08
+  },
+  {
+    "test_case_id": null,
     "step": 1,
     "query": "Tôi là nhân viên NV003. Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, hãy tạo yêu cầu hỗ trợ kỹ thuật với mức ưu tiên MEDIUM.",
     "action_type": "TOOL_EXECUTION",
-    "thought": "Tôi cần kiểm tra xem nhân viên NV003 đã có ticket sự cố phần cứng liên quan đến máy in đang mở hay không để tránh tạo ticket trùng. Vì vậy, tôi sẽ gọi helpdesk_query với employee_id 'NV003'.\n\nGọi chức năng tra cứu hồ sơ IT và ticket:",
+    "thought": "Tôi cần kiểm tra xem nhân viên NV003 có ticket sự cố về máy in (thiết bị ngoại vi - HARDWARE) nào đang mở hoặc đang xử lý hay không để tránh tạo ticket trùng.\n\nGọi helpdesk_query với employee_id='NV003' để tra cứu ticket hiện có.",
     "tool_name": "helpdesk_query",
     "arguments": {
       "employee_id": "NV003"
@@ -93,27 +93,27 @@
       "tickets": [],
       "active_ticket_count": 0
     },
-    "llm_latency_ms": 1360.02,
+    "llm_latency_ms": 2056.85,
     "retry_wait_ms": 0.0,
     "tool_latency_ms": 0.07,
-    "latency_ms": 1360.09,
+    "latency_ms": 2056.92,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 0.06
+    "start_offset_ms": 0.08
   },
   {
-    "test_case_id": "TC03",
+    "test_case_id": null,
     "step": 2,
     "query": "Tôi là nhân viên NV003. Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, hãy tạo yêu cầu hỗ trợ kỹ thuật với mức ưu tiên MEDIUM.",
     "action_type": "TOOL_EXECUTION",
-    "thought": "OpenAI quyết định gọi công cụ: create_support_ticket({\"employee_id\": \"NV003\", \"category\": \"HARDWARE\", \"priority\": \"MEDIUM\", \"title\": \"Máy in tầng 5 Tòa B không nhận lệnh in từ laptop\", \"description\": \"Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của nhân viên NV003 từ sáng nay, ảnh hưởng tới công việc in tài liệu của Phòng Kinh doanh.\", \"assignee\": \"Đỗ Thanh Tùng\"})",
+    "thought": "Nhân viên NV003 hiện không có ticket sự cố nào liên quan đến phần cứng máy in đang mở hoặc xử lý. Tôi sẽ tạo ticket mới cho sự cố máy in không nhận lệnh in từ laptop với mức ưu tiên MEDIUM.\n\nĐang tiến hành tạo ticket...",
     "tool_name": "create_support_ticket",
     "arguments": {
       "employee_id": "NV003",
       "category": "HARDWARE",
       "priority": "MEDIUM",
       "title": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop",
-      "description": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của nhân viên NV003 từ sáng nay, ảnh hưởng tới công việc in tài liệu của Phòng Kinh doanh.",
+      "description": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, ảnh hưởng đến công việc.",
       "assignee": "Đỗ Thanh Tùng"
     },
     "mcp_request_id": 3,
@@ -125,39 +125,76 @@
         "category": "HARDWARE",
         "priority": "MEDIUM",
         "title": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop",
-        "description": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của nhân viên NV003 từ sáng nay, ảnh hưởng tới công việc in tài liệu của Phòng Kinh doanh.",
+        "description": "Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, ảnh hưởng đến công việc.",
         "status": "OPEN",
         "assignee": "Đỗ Thanh Tùng",
-        "created_at": "2026-09-13 10:34",
-        "updated_at": "2026-09-13 10:34"
+        "created_at": "2026-09-13 10:35",
+        "updated_at": "2026-09-13 10:35"
       },
       "sla_response_time": "1 ngày làm việc",
       "message": "Đã tạo ticket IT-1013 (HARDWARE, MEDIUM) cho Hoàng Gia Bảo, giao cho kỹ thuật viên Đỗ Thanh Tùng."
     },
-    "llm_latency_ms": 1175.85,
+    "llm_latency_ms": 1881.15,
     "retry_wait_ms": 0.0,
-    "tool_latency_ms": 0.09,
-    "latency_ms": 1175.94,
+    "tool_latency_ms": 0.15,
+    "latency_ms": 1881.3,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 1360.51
+    "start_offset_ms": 2057.52
   },
   {
-    "test_case_id": "TC03",
+    "test_case_id": null,
     "step": 3,
     "query": "Tôi là nhân viên NV003. Máy in tầng 5 Tòa B không nhận lệnh in từ laptop của tôi từ sáng nay, hãy tạo yêu cầu hỗ trợ kỹ thuật với mức ưu tiên MEDIUM.",
     "action_type": "FINAL_ANSWER",
     "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Đã tạo ticket IT-1013: Máy in tầng 5 Tòa B không nhận lệnh in từ laptop, mức ưu tiên MEDIUM. Ticket hiện ở trạng thái OPEN, kỹ thuật viên phụ trách là Đỗ Thanh Tùng, thời gian phản hồi theo SLA là 1 ngày làm việc.",
-    "llm_latency_ms": 1031.39,
+    "output": "Đã tạo ticket IT-1013 cho sự cố máy in tầng 5 Tòa B không nhận lệnh in từ laptop với mức ưu tiên MEDIUM. Ticket ở trạng thái OPEN, kỹ thuật viên phụ trách là Đỗ Thanh Tùng, thời gian đáp ứng SLA là 1 ngày làm việc. Bạn cần hỗ trợ gì thêm không?",
+    "llm_latency_ms": 1046.85,
     "retry_wait_ms": 0.0,
-    "latency_ms": 1031.39,
+    "latency_ms": 1046.85,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 2536.81
+    "start_offset_ms": 3939.27
   },
   {
-    "test_case_id": "TC04",
+    "test_case_id": null,
+    "step": 1,
+    "query": "Tài khoản của nhân viên NV999 bị khóa, hãy kiểm tra thông tin rồi tạo ticket mở khóa cho người này.",
+    "action_type": "TOOL_EXECUTION",
+    "thought": "OpenAI quyết định gọi công cụ: helpdesk_query({\"employee_id\": \"NV999\"})",
+    "tool_name": "helpdesk_query",
+    "arguments": {
+      "employee_id": "NV999"
+    },
+    "mcp_request_id": 4,
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy nhân viên có mã 'NV999' trong hệ thống IT Helpdesk"
+    },
+    "llm_latency_ms": 1107.11,
+    "retry_wait_ms": 0.0,
+    "tool_latency_ms": 0.04,
+    "latency_ms": 1107.15,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4.1-mini",
+    "start_offset_ms": 0.11
+  },
+  {
+    "test_case_id": null,
+    "step": 2,
+    "query": "Tài khoản của nhân viên NV999 bị khóa, hãy kiểm tra thông tin rồi tạo ticket mở khóa cho người này.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Không tìm thấy nhân viên có mã NV999 trong hệ thống. Bạn vui lòng kiểm tra lại mã nhân viên giúp tôi.",
+    "llm_latency_ms": 834.1,
+    "retry_wait_ms": 0.0,
+    "latency_ms": 834.1,
+    "provider": "OpenAIProvider",
+    "model": "gpt-4.1-mini",
+    "start_offset_ms": 1107.61
+  },
+  {
+    "test_case_id": null,
     "step": 1,
     "query": "Tôi là NV001, wifi ở tầng 3 lại mất kết nối hoàn toàn nên tôi không làm việc được. Kiểm tra xem tôi còn ticket mạng nào đang mở không; nếu không có thì tạo ticket mới và giao cho kỹ thuật viên phụ trách của tôi.",
     "action_type": "TOOL_EXECUTION",
@@ -166,7 +203,7 @@
     "arguments": {
       "employee_id": "NV001"
     },
-    "mcp_request_id": 4,
+    "mcp_request_id": 5,
     "observation": {
       "status": "SUCCESS",
       "employee_id": "NV001",
@@ -207,30 +244,30 @@
       ],
       "active_ticket_count": 1
     },
-    "llm_latency_ms": 794.64,
+    "llm_latency_ms": 895.07,
     "retry_wait_ms": 0.0,
-    "tool_latency_ms": 0.07,
-    "latency_ms": 794.71,
+    "tool_latency_ms": 0.06,
+    "latency_ms": 895.13,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 0.08
+    "start_offset_ms": 0.11
   },
   {
-    "test_case_id": "TC04",
+    "test_case_id": null,
     "step": 2,
     "query": "Tôi là NV001, wifi ở tầng 3 lại mất kết nối hoàn toàn nên tôi không làm việc được. Kiểm tra xem tôi còn ticket mạng nào đang mở không; nếu không có thì tạo ticket mới và giao cho kỹ thuật viên phụ trách của tôi.",
     "action_type": "TOOL_EXECUTION",
-    "thought": "OpenAI quyết định gọi công cụ: create_support_ticket({\"employee_id\": \"NV001\", \"category\": \"NETWORK\", \"priority\": \"HIGH\", \"title\": \"Mất kết nối wifi tầng 3 Tòa A\", \"description\": \"Wifi ở tầng 3 mất kết nối hoàn toàn, làm việc bị gián đoạn, không thể truy cập internet từ sáng nay.\", \"assignee\": \"Trần Quốc Huy\"})",
+    "thought": "OpenAI quyết định gọi công cụ: create_support_ticket({\"employee_id\": \"NV001\", \"category\": \"NETWORK\", \"priority\": \"HIGH\", \"title\": \"Mất kết nối wifi tầng 3 Tòa A\", \"description\": \"Wifi tầng 3 mất kết nối hoàn toàn, không thể làm việc từ sáng nay. Cần hỗ trợ khẩn cấp.\", \"assignee\": \"Trần Quốc Huy\"})",
     "tool_name": "create_support_ticket",
     "arguments": {
       "employee_id": "NV001",
       "category": "NETWORK",
       "priority": "HIGH",
       "title": "Mất kết nối wifi tầng 3 Tòa A",
-      "description": "Wifi ở tầng 3 mất kết nối hoàn toàn, làm việc bị gián đoạn, không thể truy cập internet từ sáng nay.",
+      "description": "Wifi tầng 3 mất kết nối hoàn toàn, không thể làm việc từ sáng nay. Cần hỗ trợ khẩn cấp.",
       "assignee": "Trần Quốc Huy"
     },
-    "mcp_request_id": 5,
+    "mcp_request_id": 6,
     "observation": {
       "status": "SUCCESS",
       "ticket": {
@@ -239,72 +276,35 @@
         "category": "NETWORK",
         "priority": "HIGH",
         "title": "Mất kết nối wifi tầng 3 Tòa A",
-        "description": "Wifi ở tầng 3 mất kết nối hoàn toàn, làm việc bị gián đoạn, không thể truy cập internet từ sáng nay.",
+        "description": "Wifi tầng 3 mất kết nối hoàn toàn, không thể làm việc từ sáng nay. Cần hỗ trợ khẩn cấp.",
         "status": "OPEN",
         "assignee": "Trần Quốc Huy",
-        "created_at": "2026-09-13 10:34",
-        "updated_at": "2026-09-13 10:34"
+        "created_at": "2026-09-13 10:36",
+        "updated_at": "2026-09-13 10:36"
       },
       "sla_response_time": "4 giờ làm việc",
       "message": "Đã tạo ticket IT-1014 (NETWORK, HIGH) cho Nguyễn Minh Khoa, giao cho kỹ thuật viên Trần Quốc Huy."
     },
-    "llm_latency_ms": 1104.52,
+    "llm_latency_ms": 1194.03,
     "retry_wait_ms": 0.0,
     "tool_latency_ms": 0.11,
-    "latency_ms": 1104.63,
+    "latency_ms": 1194.14,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 795.13
+    "start_offset_ms": 895.58
   },
   {
-    "test_case_id": "TC04",
+    "test_case_id": null,
     "step": 3,
     "query": "Tôi là NV001, wifi ở tầng 3 lại mất kết nối hoàn toàn nên tôi không làm việc được. Kiểm tra xem tôi còn ticket mạng nào đang mở không; nếu không có thì tạo ticket mới và giao cho kỹ thuật viên phụ trách của tôi.",
     "action_type": "FINAL_ANSWER",
     "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Bạn hiện không có ticket mạng nào đang mở trước đó. Tôi đã tạo mới ticket IT-1014 với mức ưu tiên HIGH cho sự cố mất kết nối wifi tầng 3 Tòa A, giao cho kỹ thuật viên Trần Quốc Huy xử lý. Thời gian phản hồi trong 4 giờ làm việc.",
-    "llm_latency_ms": 1224.0,
+    "output": "Bạn hiện không có ticket mạng đang mở. Tôi đã tạo ticket mới IT-1014 với mức ưu tiên HIGH, giao cho kỹ thuật viên Trần Quốc Huy xử lý. Thời gian phản hồi dự kiến là 4 giờ làm việc.",
+    "llm_latency_ms": 944.94,
     "retry_wait_ms": 0.0,
-    "latency_ms": 1224.0,
+    "latency_ms": 944.94,
     "provider": "OpenAIProvider",
     "model": "gpt-4.1-mini",
-    "start_offset_ms": 1900.19
-  },
-  {
-    "test_case_id": "TC05",
-    "step": 1,
-    "query": "Tài khoản của nhân viên NV999 bị khóa, hãy kiểm tra thông tin rồi tạo ticket mở khóa cho người này.",
-    "action_type": "TOOL_EXECUTION",
-    "thought": "OpenAI quyết định gọi công cụ: helpdesk_query({\"employee_id\": \"NV999\"})",
-    "tool_name": "helpdesk_query",
-    "arguments": {
-      "employee_id": "NV999"
-    },
-    "mcp_request_id": 6,
-    "observation": {
-      "status": "NOT_FOUND",
-      "message": "Không tìm thấy nhân viên có mã 'NV999' trong hệ thống IT Helpdesk"
-    },
-    "llm_latency_ms": 946.29,
-    "retry_wait_ms": 0.0,
-    "tool_latency_ms": 0.03,
-    "latency_ms": 946.32,
-    "provider": "OpenAIProvider",
-    "model": "gpt-4.1-mini",
-    "start_offset_ms": 0.12
-  },
-  {
-    "test_case_id": "TC05",
-    "step": 2,
-    "query": "Tài khoản của nhân viên NV999 bị khóa, hãy kiểm tra thông tin rồi tạo ticket mở khóa cho người này.",
-    "action_type": "FINAL_ANSWER",
-    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Mã nhân viên NV999 không tồn tại trong hệ thống, bạn vui lòng kiểm tra lại mã nhân viên và cung cấp đúng mã để tôi hỗ trợ tiếp nhé.",
-    "llm_latency_ms": 873.52,
-    "retry_wait_ms": 0.0,
-    "latency_ms": 873.52,
-    "provider": "OpenAIProvider",
-    "model": "gpt-4.1-mini",
-    "start_offset_ms": 946.86
+    "start_offset_ms": 2090.17
   }
 ]
